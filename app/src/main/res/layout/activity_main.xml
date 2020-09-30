@@ -6,15 +6,6 @@
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
-    <Button
-        android:id="@+id/get_data"
-        android:layout_width="330dp"
-        android:layout_height="38dp"
-        android:background="@color/colorAccent"
-        android:text="GET REQUEST DATA"
-        android:textColor="#fff"
-        app:layout_anchor="@+id/include"
-        app:layout_anchorGravity="top|center" />
 
     <com.google.android.material.appbar.AppBarLayout
         android:id="@+id/appBarLayout"
@@ -44,13 +35,6 @@
         android:layout_margin="@dimen/fab_margin"
         app:srcCompat="@android:drawable/ic_dialog_email" />
 
-    <TextView
-        android:id="@+id/get_respone_data"
-        android:layout_width="207dp"
-        android:layout_height="wrap_content"
-        android:layout_below="@id/get_data"
-        android:padding="10dp"
-        android:text="Response : "
-        android:textColor="#000" />
+
 
 </androidx.coordinatorlayout.widget.CoordinatorLayout>
