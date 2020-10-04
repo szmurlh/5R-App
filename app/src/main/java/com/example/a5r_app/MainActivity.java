@@ -2,8 +2,11 @@ package com.example.a5r_app;
 
 //max imports
 import android.os.Bundle;
+import android.widget.AdapterView;
+import android.widget.ArrayAdapter;
 import android.widget.Button;
 import android.widget.TextView;
+import android.widget.Spinner;
 import com.android.volley.AuthFailureError;
 import com.android.volley.Request;
 import com.android.volley.RequestQueue;
@@ -12,7 +15,11 @@ import com.android.volley.VolleyError;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
 import org.json.JSONObject;
+
+import java.lang.reflect.GenericArrayType;
+import java.util.ArrayList;
 import java.util.HashMap;
+import java.util.List;
 import java.util.Map;
 import androidx.appcompat.app.AppCompatActivity;
 
@@ -31,15 +38,161 @@ import android.view.View;
 
 import android.view.Menu;
 import android.view.MenuItem;
+import android.widget.Toast;
 
 public class MainActivity extends AppCompatActivity {
 
     private TextView get_response_text,post_response_text;
 
+    private Spinner batterySpinner;
+    private Spinner plasticsSpinner;
+    private Spinner electronicsSpinner;
+    private Spinner bottlesSpinner;
+
     @Override
+
+
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
+
+        electronicsSpinner = findViewById(R.id.spinner4);
+        List<String> Electronics = new ArrayList<>();
+        Electronics.add(0, "Electronics");
+        Electronics.add("Calculators");
+        Electronics.add("Cell Phones");
+        Electronics.add("Laptops");
+        Electronics.add("Gaming Consoles");
+
+        ArrayAdapter<String> dataAdapter3;
+        dataAdapter3 = new ArrayAdapter(this, android.R.layout.simple_spinner_item, Electronics);
+        dataAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        electronicsSpinner.setAdapter(dataAdapter3);
+        electronicsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(parent.getItemAtPosition(position).equals("Electronics")){
+
+                }
+                else{
+                    String item = parent.getItemAtPosition(position).toString();
+                    Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+        bottlesSpinner = findViewById(R.id.spinner5);
+        List<String> bottlesAndCans = new ArrayList<>();
+        bottlesAndCans.add(0, "Bottles & Cans");
+        bottlesAndCans.add("Aluminum Cans");
+        bottlesAndCans.add("Plastic Bottles");
+        bottlesAndCans.add("Glass Bottles");
+        ArrayAdapter<String> dataAdapter4;
+        dataAdapter4 = new ArrayAdapter(this, android.R.layout.simple_spinner_item, bottlesAndCans);
+        dataAdapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        bottlesSpinner.setAdapter(dataAdapter4);
+        bottlesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if(parent.getItemAtPosition(position).equals("Bottles & Cans")){
+
+                }
+                else{
+                    String item = parent.getItemAtPosition(position).toString();
+                    Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
+
+                }
+            }
+
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+            }
+        });
+
+
+        batterySpinner = findViewById(R.id.spinner);
+        List<String> Batteries = new ArrayList<>();
+        Batteries.add(0, "Batteries");
+        Batteries.add("Alkaline Batteries");
+        Batteries.add("Cell Phone Batteries");
+        Batteries.add("Automotive Batteries");
+        Batteries.add("E-Cigarette Batteries");
+
+        ArrayAdapter<String> dataAdapter;
+        dataAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, Batteries);
+
+        dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+
+        batterySpinner.setAdapter(dataAdapter);
+
+        batterySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+
+                if (parent.getItemAtPosition(position).equals("Batteries")){
+
+                }
+                else{
+                    String item = parent.getItemAtPosition(position).toString();
+                    Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
+
+                }
+
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+
+            }
+        });
+
+        plasticsSpinner = findViewById(R.id.spinner3);
+        List<String>Plastics = new ArrayList<>();
+        Plastics.add(0, "Plastics");
+        Plastics.add("Plastic Bags");
+        Plastics.add("Plastic Cups");
+        Plastics.add("Plastic Jugs");
+        Plastics.add("Plastic Bottles");
+
+        ArrayAdapter<String> dataAdapter2;
+        dataAdapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, Plastics);
+        dataAdapter2.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        plasticsSpinner.setAdapter(dataAdapter2);
+        plasticsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+            @Override
+            public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
+                if (parent.getItemAtPosition(position).equals("Plastics")){
+
+                }
+                else{
+                    String item = parent.getItemAtPosition(position).toString();
+                    Toast.makeText(parent.getContext(), "Selected " + item, Toast.LENGTH_SHORT).show();
+
+                }
+            }
+
+            @Override
+            public void onNothingSelected(AdapterView<?> parent) {
+
+
+
+            }
+        });
+
+
+
+
+
+
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
 
