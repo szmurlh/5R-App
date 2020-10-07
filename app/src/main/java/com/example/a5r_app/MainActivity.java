@@ -1,6 +1,7 @@
 package com.example.a5r_app;
 
 //max imports
+import android.content.Intent;
 import android.os.Bundle;
 import android.widget.AdapterView;
 import android.widget.ArrayAdapter;
@@ -143,6 +144,11 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
+
+                    if(parent.getItemAtPosition(position).equals("Alkaline Batteries")){
+                        Intent alkalineIntent= new Intent(MainActivity.this, AlkalineBattery.class);
+                        startActivity(alkalineIntent);
+                    }
 
                 }
 
