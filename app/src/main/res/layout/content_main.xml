@@ -43,7 +43,7 @@
         app:layout_constraintTop_toTopOf="parent" />
 
     <TextView
-        android:id="@+id/get_respone_data"
+        android:id="@+id/get_response_data"
         android:layout_width="207dp"
         android:layout_height="wrap_content"
         android:layout_below="@id/get_data"

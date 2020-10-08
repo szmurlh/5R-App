@@ -14,8 +14,12 @@ import com.android.volley.Request;
 import com.android.volley.RequestQueue;
 import com.android.volley.Response;
 import com.android.volley.VolleyError;
+import com.android.volley.toolbox.JsonArrayRequest;
 import com.android.volley.toolbox.StringRequest;
 import com.android.volley.toolbox.Volley;
+
+import org.json.JSONArray;
+import org.json.JSONException;
 import org.json.JSONObject;
 
 import java.lang.reflect.GenericArrayType;
@@ -276,7 +280,8 @@ public class MainActivity extends AppCompatActivity {
         Button get_request_button=findViewById(R.id.get_data);
         //Button post_request_button=findViewById(R.id.post_data);
 
-        get_response_text=findViewById(R.id.get_respone_data);
+        //This is the TextView where the response will be displayed
+        get_response_text=findViewById(R.id.get_response_data);
         //post_response_text=findViewById(R.id.post_respone_data);
 
 
@@ -366,34 +371,37 @@ public class MainActivity extends AppCompatActivity {
 
     }
 */
-    private void sendGetRequest() {
-        //get working now
-        //let's try post and send some data to server
-        RequestQueue queue= Volley.newRequestQueue(MainActivity.this);
-        String url="https://jsonblob.com/api/5d1815da-02a9-11eb-9f82-2f0342b0cfd0";
-        StringRequest stringRequest=new StringRequest(Request.Method.GET, url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                get_response_text.setText("Data : "+response);
-                try {
-                    JSONObject jsonObject = new JSONObject(response);
-                    get_response_text.setText("Data 1 :"+jsonObject.getString("data_1")+"\n");
-                    get_response_text.append("Data 2 :"+jsonObject.getString("data_2")+"\n");
-                    get_response_text.append("Data 3 :"+jsonObject.getString("data_3")+"\n");
-                }
-                catch (Exception e){
-                    e.printStackTrace();
-                    get_response_text.setText("Failed to Parse Json");
-                }
+private void sendGetRequest() {
+    //get_response_text is the TextView containing response data
+    RequestQueue queue= Volley.newRequestQueue(MainActivity.this);
+    String url="https://jsonblob.com/api/5d1815da-02a9-11eb-9f82-2f0342b0cfd0";
 
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                get_response_text.setText("Data : Response Failed");
-            }
-        });
+    JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url,
+            new Response.Listener<JSONArray>() {
+                @Override
+                public void onResponse(JSONArray response) {
 
-        queue.add(stringRequest);
-    }
+                    for (int i = 0; i < response.length(); i++) {
+                        try {
+                            JSONObject jsonObject = response.getJSONObject(i);
+
+                            String firstName = jsonObject.getString("firstName");
+                            String lastName = jsonObject.getString("lastName");
+                            int zip = jsonObject.getInt("zip");
+
+                            get_response_text.setText(get_response_text.getText() + firstName + lastName + zip);
+
+                        } catch (JSONException e) {
+                            e.printStackTrace();
+                        }
+                    }
+                }
+            }, new Response.ErrorListener() {
+        @Override
+        public void onErrorResponse(VolleyError error) {
+
+        }
+    });
+    queue.add(jsonArrayRequest);
+}
 }
