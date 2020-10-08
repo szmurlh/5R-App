@@ -1,6 +1,7 @@
 package com.example.a5r_app;
 
 //max imports
+import android.Manifest;
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.AdapterView;
@@ -22,6 +23,8 @@ import java.util.ArrayList;
 import java.util.HashMap;
 import java.util.List;
 import java.util.Map;
+
+import androidx.annotation.MainThread;
 import androidx.appcompat.app.AppCompatActivity;
 
 import android.os.Bundle;
@@ -78,6 +81,24 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
+                    if(parent.getItemAtPosition(position).equals("Calculators")) {
+                        Intent calcIntent = new Intent(MainActivity.this, Calculators.class);
+                        startActivity(calcIntent);
+                    }
+                    if(parent.getItemAtPosition(position).equals("Cell Phones")){
+                        Intent phoneIntent = new Intent(MainActivity.this, CellPhones.class);
+                        startActivity(phoneIntent);
+                    }
+                    if(parent.getItemAtPosition(position).equals("Laptops")){
+                        Intent laptopIntent = new Intent(MainActivity.this, Laptops.class);
+                        startActivity(laptopIntent);
+                    }
+                    if(parent.getItemAtPosition(position).equals("Gaming Consoles")){
+                        Intent gamingIntent = new Intent(MainActivity.this, GamingConsoles.class);
+                        startActivity(gamingIntent);
+                    }
+
+
                 }
             }
 
@@ -107,6 +128,19 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
+                    if(parent.getItemAtPosition(position).equals("Aluminum Cans")){
+                        Intent aluminumIntent = new Intent(MainActivity.this, AluminumCans.class);
+                        startActivity(aluminumIntent);
+                    }
+                    if(parent.getItemAtPosition(position).equals("Plastic Bottles")){
+                        Intent bottleIntent = new Intent(MainActivity.this, PlasticBottles.class);
+                        startActivity(bottleIntent);
+                    }
+                    if(parent.getItemAtPosition(position).equals("Glass Bottles")){
+                        Intent glassIntent = new Intent(MainActivity.this, GlassBottles.class);
+                        startActivity(glassIntent);
+                    }
+
 
                 }
             }
@@ -149,6 +183,19 @@ public class MainActivity extends AppCompatActivity {
                         Intent alkalineIntent= new Intent(MainActivity.this, AlkalineBattery.class);
                         startActivity(alkalineIntent);
                     }
+                    if(parent.getItemAtPosition(position).equals("Cell Phone Batteries")){
+                        Intent cellBatteryIntent = new Intent(MainActivity.this, CellPhoneBattery.class);
+                        startActivity(cellBatteryIntent);
+                    }
+                    if(parent.getItemAtPosition(position).equals("Automotive Batteries")){
+                        Intent autoIntent = new Intent (MainActivity.this, AutomotiveBattery.class);
+                        startActivity(autoIntent);
+                    }
+                    if(parent.getItemAtPosition(position).equals("E-Cigarette Batteries")){
+                        Intent cigBatteryIntent = new Intent(MainActivity.this, ECigaretteBattery.class);
+                        startActivity(cigBatteryIntent);
+                    }
+
 
                 }
 
@@ -182,7 +229,22 @@ public class MainActivity extends AppCompatActivity {
                 else{
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected " + item, Toast.LENGTH_SHORT).show();
-
+                    if(parent.getItemAtPosition(position).equals("Plastic Bags")){
+                        Intent bagIntent= new Intent(MainActivity.this, PlasticBags.class);
+                        startActivity(bagIntent);
+                    }
+                    if(parent.getItemAtPosition(position).equals("Plastic Cups")){
+                        Intent cupIntent = new Intent(MainActivity.this, PlasticCups.class);
+                        startActivity(cupIntent);
+                    }
+                    if(parent.getItemAtPosition(position).equals("Plastic Jugs")){
+                        Intent jugIntent = new Intent(MainActivity.this, PlasticJugs.class);
+                        startActivity(jugIntent);
+                    }
+                    if(parent.getItemAtPosition(position).equals("Plastic Bottles")){
+                        Intent bottleIntent = new Intent(MainActivity.this, PlasticBottles.class);
+                        startActivity(bottleIntent);
+                    }
                 }
             }
 
