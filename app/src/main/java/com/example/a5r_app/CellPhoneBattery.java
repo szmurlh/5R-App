@@ -20,7 +20,7 @@ public class CellPhoneBattery extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(CellPhoneBattery.this, MainActivity.class);
+                Intent tempIntent = new Intent(CellPhoneBattery.this, ProductSelection.class);
                 startActivity(tempIntent);
                 
             }

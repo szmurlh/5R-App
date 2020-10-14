@@ -17,7 +17,7 @@ public class GamingConsoles extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(GamingConsoles.this, MainActivity.class);
+                Intent tempIntent = new Intent(GamingConsoles.this, ProductSelection.class);
                 startActivity(tempIntent);
             }
         });

@@ -19,7 +19,7 @@ public class GlassBottles extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(GlassBottles.this, MainActivity.class);
+                Intent tempIntent = new Intent(GlassBottles.this, ProductSelection.class);
                 startActivity(tempIntent);
             }
         });

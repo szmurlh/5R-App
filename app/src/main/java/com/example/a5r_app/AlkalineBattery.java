@@ -22,7 +22,7 @@ public class AlkalineBattery extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(AlkalineBattery.this, MainActivity.class);
+                Intent tempIntent = new Intent(AlkalineBattery.this, ProductSelection.class);
                 startActivity(tempIntent);
             }
         });

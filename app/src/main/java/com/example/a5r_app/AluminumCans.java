@@ -19,7 +19,7 @@ public class AluminumCans extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(AluminumCans.this, MainActivity.class);
+                Intent tempIntent = new Intent(AluminumCans.this, ProductSelection.class);
                 startActivity(tempIntent);
             }
         });

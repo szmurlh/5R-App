@@ -19,7 +19,7 @@ public class ECigaretteBattery extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(ECigaretteBattery.this, MainActivity.class);
+                Intent tempIntent = new Intent(ECigaretteBattery.this, ProductSelection.class);
                 startActivity(tempIntent);
             }
         });

@@ -18,7 +18,7 @@ public class CellPhones extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(CellPhones.this, MainActivity.class);
+                Intent tempIntent = new Intent(CellPhones.this, ProductSelection.class);
                 startActivity(tempIntent);
             }
         });

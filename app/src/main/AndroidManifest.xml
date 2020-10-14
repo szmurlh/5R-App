@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_launcher_round"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".GlassBottles"></activity>
+        <activity android:name=".ProductSelection"></activity>
+        <activity android:name=".GlassBottles" />
         <activity android:name=".AluminumCans" />
         <activity android:name=".GamingConsoles" />
         <activity android:name=".Laptops" />

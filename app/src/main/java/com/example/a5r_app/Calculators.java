@@ -18,7 +18,7 @@ public class Calculators extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(Calculators.this, MainActivity.class);
+                Intent tempIntent = new Intent(Calculators.this, ProductSelection.class);
                 startActivity(tempIntent);
             }
         });
