@@ -35,6 +35,7 @@ import android.view.Menu;
 import android.view.MenuItem;
 import android.widget.Toast;
 
+//[Activity(Label = "ProductSelection", Theme = "@style/AppTheme.NoActionBar")]
 public class ProductSelection extends AppCompatActivity {
 
     private TextView get_response_text,post_response_text;
