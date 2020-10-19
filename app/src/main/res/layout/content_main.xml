@@ -28,6 +28,8 @@
 
     <Button
         android:id="@+id/button"
+        android:textColor="@android:color/black"
+        android:background="#4CBB17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="266dp"
@@ -63,6 +65,7 @@
 
     <Button
         android:id="@+id/get_data"
+
         android:layout_width="330dp"
         android:layout_height="38dp"
         android:layout_marginStart="40dp"
@@ -143,6 +146,8 @@
 
     <Button
         android:id="@+id/back"
+        android:textColor="@android:color/black"
+        android:background="#4CBB17"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_marginStart="307dp"

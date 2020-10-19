@@ -18,8 +18,8 @@ public class PlasticJugs extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(PlasticJugs.this, ProductSelection.class);
-                startActivity(tempIntent);
+                Intent temporaryIntent = new Intent(PlasticJugs.this, ProductSelection.class);
+                startActivity(temporaryIntent);
             }
         });
         getSupportActionBar().setDisplayShowHomeEnabled(true);
