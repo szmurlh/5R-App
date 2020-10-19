@@ -13,8 +13,7 @@
         android:theme="@style/AppTheme">
         <activity
             android:name=".ProductSelection"
-            android:theme="@style/AppTheme.NoActionBar"
-            ></activity>
+            android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".GlassBottles" />
         <activity android:name=".AluminumCans" />
         <activity android:name=".GamingConsoles" />
