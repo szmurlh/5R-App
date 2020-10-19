@@ -22,5 +22,8 @@ public class Calculators extends AppCompatActivity {
                 startActivity(tempIntent);
             }
         });
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.ic_launcher_foreground);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
     }
 }

@@ -7,19 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class PlasticCups extends AppCompatActivity {
+public class RecyclingInformation extends AppCompatActivity {
     Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_plastic_cups);
-
+        setContentView(R.layout.activity_recycling_information);
         back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(PlasticCups.this, ProductSelection.class);
+                Intent tempIntent = new Intent(RecyclingInformation.this, MainActivity.class);
                 startActivity(tempIntent);
             }
         });

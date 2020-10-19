@@ -25,6 +25,9 @@ public class CellPhoneBattery extends AppCompatActivity {
                 
             }
         });
+        getSupportActionBar().setDisplayShowHomeEnabled(true);
+        getSupportActionBar().setLogo(R.mipmap.ic_launcher_foreground);
+        getSupportActionBar().setDisplayUseLogoEnabled(true);
 
 
     }
