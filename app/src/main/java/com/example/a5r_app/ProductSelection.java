@@ -225,7 +225,7 @@ public class ProductSelection extends AppCompatActivity {
         plasticsSpinner = findViewById(R.id.spinner3);
         List<String>Plastics = new ArrayList<>();
         Plastics.add(0, "Plastics");
-        Plastics.add("Plastic Bags, Films, Wraps");
+        Plastics.add("Plastic Bags, Films & Wraps");
         Plastics.add("Plastic Cups");
         Plastics.add("Plastic Containers");
         Plastics.add("Plastic Drink Bottles");
@@ -243,7 +243,7 @@ public class ProductSelection extends AppCompatActivity {
                 else{
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected " + item, Toast.LENGTH_SHORT).show();
-                    if(parent.getItemAtPosition(position).equals("Plastic Bags, Films, Wraps")){
+                    if(parent.getItemAtPosition(position).equals("Plastic Bags, Films & Wraps")){
                         Intent bagIntent= new Intent(ProductSelection.this, PlasticBags.class);
                         startActivity(bagIntent);
                     }
