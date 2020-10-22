@@ -7,20 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class AutomotiveBattery extends AppCompatActivity {
-
+public class GreenGlass extends AppCompatActivity {
     Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_automotive_battery);
-        back = findViewById(R.id.back);
+        setContentView(R.layout.activity_green_glass);
 
+        back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(AutomotiveBattery.this, ProductSelection.class);
+                Intent tempIntent = new Intent(GreenGlass.this, ProductSelection.class);
                 startActivity(tempIntent);
             }
         });

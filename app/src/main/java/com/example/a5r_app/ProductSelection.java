@@ -41,10 +41,10 @@ public class ProductSelection extends AppCompatActivity {
 
     private TextView get_response_text,post_response_text;
     Button back;
-    private Spinner batterySpinner;
+    private Spinner metalsSpinner;
     private Spinner plasticsSpinner;
     private Spinner electronicsSpinner;
-    private Spinner bottlesSpinner;
+    private Spinner glassSpinner;
 
     @Override
 
@@ -64,15 +64,15 @@ public class ProductSelection extends AppCompatActivity {
         electronicsSpinner = findViewById(R.id.spinner4);
         List<String> Electronics = new ArrayList<>();
         Electronics.add(0, "Electronics");
-        Electronics.add("Calculators");
-        Electronics.add("Cell Phones");
-        Electronics.add("Laptops");
-        Electronics.add("Gaming Consoles");
+        Electronics.add("Computer Equipment");
+        Electronics.add("Power Tools");
+        Electronics.add("Batteries");
+        Electronics.add("Entertainment & Gaming");
 
-        ArrayAdapter<String> dataAdapter3;
-        dataAdapter3 = new ArrayAdapter(this, android.R.layout.simple_spinner_item, Electronics);
-        dataAdapter3.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
-        electronicsSpinner.setAdapter(dataAdapter3);
+        ArrayAdapter<String> entertainmentGaming;
+        entertainmentGaming = new ArrayAdapter(this, android.R.layout.simple_spinner_item, Electronics);
+        entertainmentGaming.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
+        electronicsSpinner.setAdapter(entertainmentGaming);
         electronicsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
@@ -82,20 +82,20 @@ public class ProductSelection extends AppCompatActivity {
                 else{
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
-                    if(parent.getItemAtPosition(position).equals("Calculators")) {
-                        Intent calcIntent = new Intent(ProductSelection.this, Calculators.class);
-                        startActivity(calcIntent);
+                    if(parent.getItemAtPosition(position).equals("Computer Equipment")) {
+                        Intent compEquipmentIntent = new Intent(ProductSelection.this, ComputerEquipment.class);
+                        startActivity(compEquipmentIntent);
                     }
-                    if(parent.getItemAtPosition(position).equals("Cell Phones")){
-                        Intent phoneIntent = new Intent(ProductSelection.this, CellPhones.class);
-                        startActivity(phoneIntent);
+                    if(parent.getItemAtPosition(position).equals("Power Tools")){
+                        Intent toolsIntent = new Intent(ProductSelection.this, PowerTools.class);
+                        startActivity(toolsIntent);
                     }
-                    if(parent.getItemAtPosition(position).equals("Laptops")){
-                        Intent laptopIntent = new Intent(ProductSelection.this, Laptops.class);
-                        startActivity(laptopIntent);
+                    if(parent.getItemAtPosition(position).equals("Batteries")){
+                        Intent batteryIntent = new Intent(ProductSelection.this, Batteries.class);
+                        startActivity(batteryIntent);
                     }
-                    if(parent.getItemAtPosition(position).equals("Gaming Consoles")){
-                        Intent gamingIntent = new Intent(ProductSelection.this, GamingConsoles.class);
+                    if(parent.getItemAtPosition(position).equals("Entertainment & Gaming")){
+                        Intent gamingIntent = new Intent(ProductSelection.this, EntertainmentGaming.class);
                         startActivity(gamingIntent);
                     }
 
@@ -109,38 +109,51 @@ public class ProductSelection extends AppCompatActivity {
             }
         });
 
-        bottlesSpinner = findViewById(R.id.spinner5);
-        List<String> bottlesAndCans = new ArrayList<>();
-        bottlesAndCans.add(0, "Bottles & Cans");
-        bottlesAndCans.add("Aluminum Cans");
-        bottlesAndCans.add("Plastic Bottles");
-        bottlesAndCans.add("Glass Bottles");
+        glassSpinner = findViewById(R.id.spinner5);
+        List<String> glass = new ArrayList<>();
+        glass.add(0, "Glass");
+        glass.add("Blue Glass");
+        glass.add("Clear Glass");
+        glass.add("Green Glass");
+        glass.add("Brown Glass");
+        glass.add("Treated Glass");
         ArrayAdapter<String> dataAdapter4;
-        dataAdapter4 = new ArrayAdapter(this, android.R.layout.simple_spinner_item, bottlesAndCans);
+        dataAdapter4 = new ArrayAdapter(this, android.R.layout.simple_spinner_item, glass);
         dataAdapter4.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        bottlesSpinner.setAdapter(dataAdapter4);
-        bottlesSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        glassSpinner.setAdapter(dataAdapter4);
+        glassSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
-                if(parent.getItemAtPosition(position).equals("Bottles & Cans")){
+                if(parent.getItemAtPosition(position).equals("Glass")){
 
                 }
                 else{
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
-                    if(parent.getItemAtPosition(position).equals("Aluminum Cans")){
-                        Intent aluminumIntent = new Intent(ProductSelection.this, AluminumCans.class);
-                        startActivity(aluminumIntent);
+                    if(parent.getItemAtPosition(position).equals("Blue Glass")){
+                        Intent blueIntent = new Intent(ProductSelection.this, BlueGlass.class);
+                        startActivity(blueIntent);
                     }
-                    if(parent.getItemAtPosition(position).equals("Plastic Bottles")){
-                        Intent bottleIntent = new Intent(ProductSelection.this, PlasticBottles.class);
-                        startActivity(bottleIntent);
+                    if(parent.getItemAtPosition(position).equals("Clear Glass")){
+                        Intent clearIntent = new Intent(ProductSelection.this, ClearGlass.class);
+                        startActivity(clearIntent);
                     }
-                    if(parent.getItemAtPosition(position).equals("Glass Bottles")){
-                        Intent glassIntent = new Intent(ProductSelection.this, GlassBottles.class);
-                        startActivity(glassIntent);
+
+                    if(parent.getItemAtPosition(position).equals("Green Glass")){
+                        Intent greenIntent = new Intent(ProductSelection.this, GreenGlass.class);
+                        startActivity(greenIntent);
                     }
+                    if(parent.getItemAtPosition(position).equals("Brown Glass")){
+                        Intent brownIntent = new Intent(ProductSelection.this, BrownGlass.class);
+                        startActivity(brownIntent);
+                    }
+                    if(parent.getItemAtPosition(position).equals("Treated Glass")){
+                        Intent treatedIntent = new Intent(ProductSelection.this, TreatedGlass.class);
+                        startActivity(treatedIntent);
+                    }
+
+
 
 
                 }
@@ -154,47 +167,47 @@ public class ProductSelection extends AppCompatActivity {
         });
 
 
-        batterySpinner = findViewById(R.id.spinner);
-        List<String> Batteries = new ArrayList<>();
-        Batteries.add(0, "Batteries");
-        Batteries.add("Alkaline Batteries");
-        Batteries.add("Cell Phone Batteries");
-        Batteries.add("Automotive Batteries");
-        Batteries.add("E-Cigarette Batteries");
+        metalsSpinner = findViewById(R.id.spinner);
+        List<String> Metals = new ArrayList<>();
+        Metals.add(0, "Metals");
+        Metals.add("Aluminum");
+        Metals.add("Steel");
+        Metals.add("Scrap Metal");
+        Metals.add("Copper");
 
         ArrayAdapter<String> dataAdapter;
-        dataAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, Batteries);
+        dataAdapter = new ArrayAdapter(this, android.R.layout.simple_spinner_item, Metals);
 
         dataAdapter.setDropDownViewResource(android.R.layout.simple_spinner_dropdown_item);
 
-        batterySpinner.setAdapter(dataAdapter);
+        metalsSpinner.setAdapter(dataAdapter);
 
-        batterySpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
+        metalsSpinner.setOnItemSelectedListener(new AdapterView.OnItemSelectedListener() {
             @Override
             public void onItemSelected(AdapterView<?> parent, View view, int position, long id) {
 
-                if (parent.getItemAtPosition(position).equals("Batteries")){
+                if (parent.getItemAtPosition(position).equals("Metals")){
 
                 }
                 else{
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
 
-                    if(parent.getItemAtPosition(position).equals("Alkaline Batteries")){
-                        Intent alkalineIntent= new Intent(ProductSelection.this, AlkalineBattery.class);
-                        startActivity(alkalineIntent);
+                    if(parent.getItemAtPosition(position).equals("Aluminum")){
+                        Intent aluminumIntent= new Intent(ProductSelection.this, Aluminum.class);
+                        startActivity(aluminumIntent);
                     }
-                    if(parent.getItemAtPosition(position).equals("Cell Phone Batteries")){
-                        Intent cellBatteryIntent = new Intent(ProductSelection.this, CellPhoneBattery.class);
-                        startActivity(cellBatteryIntent);
+                    if(parent.getItemAtPosition(position).equals("Steel")){
+                        Intent steelIntent = new Intent(ProductSelection.this, Steel.class);
+                        startActivity(steelIntent);
                     }
-                    if(parent.getItemAtPosition(position).equals("Automotive Batteries")){
-                        Intent autoIntent = new Intent (ProductSelection.this, AutomotiveBattery.class);
-                        startActivity(autoIntent);
+                    if(parent.getItemAtPosition(position).equals("Scrap Metal")){
+                        Intent scrapIntent = new Intent (ProductSelection.this, ScrapMetal.class);
+                        startActivity(scrapIntent);
                     }
-                    if(parent.getItemAtPosition(position).equals("E-Cigarette Batteries")){
-                        Intent cigBatteryIntent = new Intent(ProductSelection.this, ECigaretteBattery.class);
-                        startActivity(cigBatteryIntent);
+                    if(parent.getItemAtPosition(position).equals("Copper")){
+                        Intent copperIntent = new Intent(ProductSelection.this, Copper.class);
+                        startActivity(copperIntent);
                     }
 
 
@@ -212,10 +225,10 @@ public class ProductSelection extends AppCompatActivity {
         plasticsSpinner = findViewById(R.id.spinner3);
         List<String>Plastics = new ArrayList<>();
         Plastics.add(0, "Plastics");
-        Plastics.add("Plastic Bags");
+        Plastics.add("Plastic Bags, Films, Wraps");
         Plastics.add("Plastic Cups");
-        Plastics.add("Plastic Jugs");
-        Plastics.add("Plastic Bottles");
+        Plastics.add("Plastic Containers");
+        Plastics.add("Plastic Drink Bottles");
 
         ArrayAdapter<String> dataAdapter2;
         dataAdapter2 = new ArrayAdapter<>(this, android.R.layout.simple_spinner_item, Plastics);
@@ -230,7 +243,7 @@ public class ProductSelection extends AppCompatActivity {
                 else{
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected " + item, Toast.LENGTH_SHORT).show();
-                    if(parent.getItemAtPosition(position).equals("Plastic Bags")){
+                    if(parent.getItemAtPosition(position).equals("Plastic Bags, Films, Wraps")){
                         Intent bagIntent= new Intent(ProductSelection.this, PlasticBags.class);
                         startActivity(bagIntent);
                     }
@@ -238,12 +251,12 @@ public class ProductSelection extends AppCompatActivity {
                         Intent cupIntent = new Intent(ProductSelection.this, PlasticCups.class);
                         startActivity(cupIntent);
                     }
-                    if(parent.getItemAtPosition(position).equals("Plastic Jugs")){
-                        Intent jugIntent = new Intent(ProductSelection.this, PlasticJugs.class);
+                    if(parent.getItemAtPosition(position).equals("Plastic Containers")){
+                        Intent jugIntent = new Intent(ProductSelection.this, PlasticContainers.class);
                         startActivity(jugIntent);
                     }
-                    if(parent.getItemAtPosition(position).equals("Plastic Bottles")){
-                        Intent bottleIntent = new Intent(ProductSelection.this, PlasticBottles.class);
+                    if(parent.getItemAtPosition(position).equals("Plastic Drink Bottles")){
+                        Intent bottleIntent = new Intent(ProductSelection.this, GreenGlass.class);
                         startActivity(bottleIntent);
                     }
                 }

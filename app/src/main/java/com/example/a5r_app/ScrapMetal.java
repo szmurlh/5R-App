@@ -7,17 +7,20 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class GamingConsoles extends AppCompatActivity {
+public class ScrapMetal extends AppCompatActivity {
+
     Button back;
+
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_gaming_consoles);
+        setContentView(R.layout.activity_scrap_metal);
         back = findViewById(R.id.back);
+
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(GamingConsoles.this, ProductSelection.class);
+                Intent tempIntent = new Intent(ScrapMetal.this, ProductSelection.class);
                 startActivity(tempIntent);
             }
         });

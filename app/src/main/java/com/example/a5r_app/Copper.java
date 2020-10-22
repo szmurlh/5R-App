@@ -7,19 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class PlasticBottles extends AppCompatActivity {
+public class Copper extends AppCompatActivity {
     Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_plastic_bottles);
+        setContentView(R.layout.activity_copper);
 
         back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(PlasticBottles.this, ProductSelection.class);
+                Intent tempIntent = new Intent(Copper.this, ProductSelection.class);
                 startActivity(tempIntent);
             }
         });

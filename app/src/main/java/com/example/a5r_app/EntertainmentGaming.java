@@ -7,18 +7,17 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class CellPhones extends AppCompatActivity {
+public class EntertainmentGaming extends AppCompatActivity {
     Button back;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_cell_phones);
+        setContentView(R.layout.activity_entertainment_gaming);
         back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(CellPhones.this, ProductSelection.class);
+                Intent tempIntent = new Intent(EntertainmentGaming.this, ProductSelection.class);
                 startActivity(tempIntent);
             }
         });
@@ -26,5 +25,4 @@ public class CellPhones extends AppCompatActivity {
         getSupportActionBar().setLogo(R.mipmap.ic_launcher_foreground);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
     }
-
 }

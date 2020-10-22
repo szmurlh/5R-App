@@ -7,23 +7,24 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Laptops extends AppCompatActivity {
+public class PlasticContainers extends AppCompatActivity {
     Button back;
-
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_laptops);
+        setContentView(R.layout.activity_plastic_containers);
+
         back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(Laptops.this, ProductSelection.class);
-                startActivity(tempIntent);
+                Intent temporaryIntent = new Intent(PlasticContainers.this, ProductSelection.class);
+                startActivity(temporaryIntent);
             }
         });
         getSupportActionBar().setDisplayShowHomeEnabled(true);
         getSupportActionBar().setLogo(R.mipmap.ic_launcher_foreground);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
     }
+
 }

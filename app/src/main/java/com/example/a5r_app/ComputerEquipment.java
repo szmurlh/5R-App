@@ -7,19 +7,18 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class AluminumCans extends AppCompatActivity {
-
+public class ComputerEquipment extends AppCompatActivity {
     Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_aluminum_cans);
+        setContentView(R.layout.activity_computer_equipment);
         back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(AluminumCans.this, ProductSelection.class);
+                Intent tempIntent = new Intent(ComputerEquipment.this, ProductSelection.class);
                 startActivity(tempIntent);
             }
         });

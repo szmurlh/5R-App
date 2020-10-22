@@ -16,20 +16,21 @@
         <activity
             android:name=".ProductSelection"
             android:theme="@style/AppTheme.NoActionBar" />
-        <activity android:name=".GlassBottles" />
-        <activity android:name=".AluminumCans" />
-        <activity android:name=".GamingConsoles" />
-        <activity android:name=".Laptops" />
-        <activity android:name=".CellPhones" />
-        <activity android:name=".Calculators" />
-        <activity android:name=".PlasticBottles" />
-        <activity android:name=".PlasticJugs" />
+        <activity android:name=".BrownGlass" />
+        <activity android:name=".BlueGlass" />
+        <activity android:name=".EntertainmentGaming" />
+        <activity android:name=".Batteries" />
+        <activity android:name=".PowerTools" />
+        <activity android:name=".ComputerEquipment" />
+        <activity android:name=".GreenGlass" />
+        <activity android:name=".PlasticContainers" />
         <activity android:name=".PlasticCups" />
         <activity android:name=".PlasticBags" />
-        <activity android:name=".ECigaretteBattery" />
-        <activity android:name=".AutomotiveBattery" />
-        <activity android:name=".CellPhoneBattery" />
-        <activity android:name=".AlkalineBattery" />
+        <activity android:name=".Copper" />
+        <activity android:name=".ScrapMetal" />
+        <activity android:name=".Steel" />
+        <activity android:name=".Aluminum" />
+        <activity android:name=".ClearGlass" />
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"

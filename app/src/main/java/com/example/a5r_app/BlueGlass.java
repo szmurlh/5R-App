@@ -7,18 +7,19 @@ import android.os.Bundle;
 import android.view.View;
 import android.widget.Button;
 
-public class Calculators extends AppCompatActivity {
+public class BlueGlass extends AppCompatActivity {
+
     Button back;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
-        setContentView(R.layout.activity_calculators);
+        setContentView(R.layout.activity_blue_glass);
         back = findViewById(R.id.back);
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(Calculators.this, ProductSelection.class);
+                Intent tempIntent = new Intent(BlueGlass.this, ProductSelection.class);
                 startActivity(tempIntent);
             }
         });
