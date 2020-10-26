@@ -20,8 +20,8 @@ public class ScrapMetal extends AppCompatActivity {
         back.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View v) {
-                Intent tempIntent = new Intent(ScrapMetal.this, ProductSelection.class);
-                startActivity(tempIntent);
+                Intent temporaryIntent = new Intent(ScrapMetal.this, ProductSelection.class);
+                startActivity(temporaryIntent);
             }
         });
         getSupportActionBar().setDisplayShowHomeEnabled(true);
