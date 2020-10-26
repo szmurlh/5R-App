@@ -17,8 +17,8 @@
             android:name=".ProductSelection"
             android:theme="@style/AppTheme.NoActionBar" />
         <activity android:name=".BrownGlass" />
-        <activity android:name=".BlueGlass" />
         <activity android:name=".EntertainmentGaming" />
+        <activity android:name=".BlueGlass" />
         <activity android:name=".Batteries" />
         <activity android:name=".PowerTools" />
         <activity android:name=".ComputerEquipment" />
