@@ -26,7 +26,7 @@ public class Steel extends AppCompatActivity {
             }
         });
         getSupportActionBar().setDisplayShowHomeEnabled(true);
-        getSupportActionBar().setLogo(R.mipmap.ic_launcher_foreground);
+        getSupportActionBar().setLogo(R.mipmap.ic_logo_foreground);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
 
