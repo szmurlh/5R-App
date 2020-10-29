@@ -83,19 +83,20 @@ public class ProductSelection extends AppCompatActivity {
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
                     if(parent.getItemAtPosition(position).equals("Computer Equipment")) {
-                        Intent compEquipmentIntent = new Intent(ProductSelection.this, ComputerEquipment.class);
+                        Intent compEquipmentIntent = new Intent(ProductSelection.this, FinalInformation.class);
+
                         startActivity(compEquipmentIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Power Tools")){
-                        Intent toolsIntent = new Intent(ProductSelection.this, PowerTools.class);
+                        Intent toolsIntent = new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(toolsIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Batteries")){
-                        Intent batteryIntent = new Intent(ProductSelection.this, Batteries.class);
+                        Intent batteryIntent = new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(batteryIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Entertainment & Gaming")){
-                        Intent gamingIntent = new Intent(ProductSelection.this, EntertainmentGaming.class);
+                        Intent gamingIntent = new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(gamingIntent);
                     }
 
@@ -132,24 +133,24 @@ public class ProductSelection extends AppCompatActivity {
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
                     if(parent.getItemAtPosition(position).equals("Blue Glass")){
-                        Intent blueIntent = new Intent(ProductSelection.this, BlueGlass.class);
+                        Intent blueIntent = new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(blueIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Clear Glass")){
-                        Intent clearIntent = new Intent(ProductSelection.this, ClearGlass.class);
+                        Intent clearIntent = new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(clearIntent);
                     }
 
                     if(parent.getItemAtPosition(position).equals("Green Glass")){
-                        Intent greenIntent = new Intent(ProductSelection.this, GreenGlass.class);
+                        Intent greenIntent = new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(greenIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Brown Glass")){
-                        Intent brownIntent = new Intent(ProductSelection.this, BrownGlass.class);
+                        Intent brownIntent = new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(brownIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Treated Glass")){
-                        Intent treatedIntent = new Intent(ProductSelection.this, TreatedGlass.class);
+                        Intent treatedIntent = new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(treatedIntent);
                     }
 
@@ -194,19 +195,19 @@ public class ProductSelection extends AppCompatActivity {
                     Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
 
                     if(parent.getItemAtPosition(position).equals("Aluminum")){
-                        Intent aluminumIntent= new Intent(ProductSelection.this, Aluminum.class);
+                        Intent aluminumIntent= new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(aluminumIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Steel")){
-                        Intent steelIntent = new Intent(ProductSelection.this, Steel.class);
+                        Intent steelIntent = new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(steelIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Scrap Metal")){
-                        Intent scrapIntent = new Intent (ProductSelection.this, ScrapMetal.class);
+                        Intent scrapIntent = new Intent (ProductSelection.this, FinalInformation.class);
                         startActivity(scrapIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Copper")){
-                        Intent copperIntent = new Intent(ProductSelection.this, Copper.class);
+                        Intent copperIntent = new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(copperIntent);
                     }
 
@@ -244,19 +245,19 @@ public class ProductSelection extends AppCompatActivity {
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected " + item, Toast.LENGTH_SHORT).show();
                     if(parent.getItemAtPosition(position).equals("Plastic Bags, Films & Wraps")){
-                        Intent bagIntent= new Intent(ProductSelection.this, PlasticBags.class);
+                        Intent bagIntent= new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(bagIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Plastic Cups")){
-                        Intent cupIntent = new Intent(ProductSelection.this, PlasticCups.class);
+                        Intent cupIntent = new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(cupIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Plastic Containers")){
-                        Intent jugIntent = new Intent(ProductSelection.this, PlasticContainers.class);
+                        Intent jugIntent = new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(jugIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Plastic Drink Bottles")){
-                        Intent bottleIntent = new Intent(ProductSelection.this, GreenGlass.class);
+                        Intent bottleIntent = new Intent(ProductSelection.this, FinalInformation.class);
                         startActivity(bottleIntent);
                     }
                 }

@@ -11,7 +11,8 @@
         android:roundIcon="@mipmap/ic_logo_foreground"
         android:supportsRtl="true"
         android:theme="@style/AppTheme">
-        <activity android:name=".ScanLabel"></activity>
+        <activity android:name=".final_information"></activity>
+        <activity android:name=".ScanLabel" />
         <activity android:name=".RecyclingInformation" />
         <activity
             android:name=".ProductSelection"
@@ -24,6 +25,7 @@
         <activity android:name=".ComputerEquipment" />
         <activity android:name=".GreenGlass" />
         <activity android:name=".PlasticContainers" />
+        <activity android:name=".FinalInformation" />
         <activity android:name=".PlasticCups" />
         <activity android:name=".PlasticBags" />
         <activity android:name=".Copper" />
