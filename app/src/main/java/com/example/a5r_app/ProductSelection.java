@@ -394,7 +394,8 @@ public class ProductSelection extends AppCompatActivity {
 private void sendGetRequest() {
     //get_response_text is the TextView containing response data
     RequestQueue queue= Volley.newRequestQueue(ProductSelection.this);
-    String url="https://jsonblob.com/api/5d1815da-02a9-11eb-9f82-2f0342b0cfd0";
+
+    String url="http://67.249.71.109:3001/user"; //put backend server here
 
     JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url,
             new Response.Listener<JSONArray>() {
