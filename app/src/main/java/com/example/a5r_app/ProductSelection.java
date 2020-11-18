@@ -1,6 +1,5 @@
 package com.example.a5r_app;
 
-//max imports
 import android.content.Intent;
 import android.os.Bundle;
 import android.widget.AdapterView;
@@ -83,20 +82,24 @@ public class ProductSelection extends AppCompatActivity {
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
                     if(parent.getItemAtPosition(position).equals("Computer Equipment")) {
-                        Intent compEquipmentIntent = new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent compEquipmentIntent = new Intent(ProductSelection.this, FinalProduct.class);
 
                         startActivity(compEquipmentIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Power Tools")){
-                        Intent toolsIntent = new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent toolsIntent = new Intent(ProductSelection.this, FinalProduct.class);
                         startActivity(toolsIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Batteries")){
-                        Intent batteryIntent = new Intent(ProductSelection.this, FinalInformation.class);
+
+                        //global variable hack - fix later if needed
+                        ((MyApplication)getApplication()).setSubCode("B");
+
+                        Intent batteryIntent = new Intent(ProductSelection.this, FinalProduct.class);
                         startActivity(batteryIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Entertainment & Gaming")){
-                        Intent gamingIntent = new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent gamingIntent = new Intent(ProductSelection.this, FinalProduct.class);
                         startActivity(gamingIntent);
                     }
 
@@ -133,24 +136,24 @@ public class ProductSelection extends AppCompatActivity {
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
                     if(parent.getItemAtPosition(position).equals("Blue Glass")){
-                        Intent blueIntent = new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent blueIntent = new Intent(ProductSelection.this, FinalProduct.class);
                         startActivity(blueIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Clear Glass")){
-                        Intent clearIntent = new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent clearIntent = new Intent(ProductSelection.this, FinalProduct.class);
                         startActivity(clearIntent);
                     }
 
                     if(parent.getItemAtPosition(position).equals("Green Glass")){
-                        Intent greenIntent = new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent greenIntent = new Intent(ProductSelection.this, FinalProduct.class);
                         startActivity(greenIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Brown Glass")){
-                        Intent brownIntent = new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent brownIntent = new Intent(ProductSelection.this, FinalProduct.class);
                         startActivity(brownIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Treated Glass")){
-                        Intent treatedIntent = new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent treatedIntent = new Intent(ProductSelection.this, FinalProduct.class);
                         startActivity(treatedIntent);
                     }
 
@@ -195,19 +198,19 @@ public class ProductSelection extends AppCompatActivity {
                     Toast.makeText(parent.getContext(), "Selected: " + item, Toast.LENGTH_SHORT).show();
 
                     if(parent.getItemAtPosition(position).equals("Aluminum")){
-                        Intent aluminumIntent= new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent aluminumIntent= new Intent(ProductSelection.this, FinalProduct.class);
                         startActivity(aluminumIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Steel")){
-                        Intent steelIntent = new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent steelIntent = new Intent(ProductSelection.this, FinalProduct.class);
                         startActivity(steelIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Scrap Metal")){
-                        Intent scrapIntent = new Intent (ProductSelection.this, FinalInformation.class);
+                        Intent scrapIntent = new Intent (ProductSelection.this, FinalProduct.class);
                         startActivity(scrapIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Copper")){
-                        Intent copperIntent = new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent copperIntent = new Intent(ProductSelection.this, FinalProduct.class);
                         startActivity(copperIntent);
                     }
 
@@ -245,19 +248,23 @@ public class ProductSelection extends AppCompatActivity {
                     String item = parent.getItemAtPosition(position).toString();
                     Toast.makeText(parent.getContext(), "Selected " + item, Toast.LENGTH_SHORT).show();
                     if(parent.getItemAtPosition(position).equals("Plastic Bags, Films & Wraps")){
-                        Intent bagIntent= new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent bagIntent= new Intent(ProductSelection.this, FinalProduct.class);
                         startActivity(bagIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Plastic Cups")){
-                        Intent cupIntent = new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent cupIntent = new Intent(ProductSelection.this, FinalProduct.class);
                         startActivity(cupIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Plastic Containers")){
-                        Intent jugIntent = new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent jugIntent = new Intent(ProductSelection.this, FinalProduct.class);
                         startActivity(jugIntent);
                     }
                     if(parent.getItemAtPosition(position).equals("Plastic Drink Bottles")){
-                        Intent bottleIntent = new Intent(ProductSelection.this, FinalInformation.class);
+                        Intent bottleIntent = new Intent(ProductSelection.this, FinalProduct.class);
+
+                        //global variable hack - fix later if needed
+                        ((MyApplication)getApplication()).setSubCode("DB");
+
                         startActivity(bottleIntent);
                     }
                 }
@@ -298,11 +305,9 @@ public class ProductSelection extends AppCompatActivity {
         });
 
         Button get_request_button=findViewById(R.id.get_data);
-        //Button post_request_button=findViewById(R.id.post_data);
 
         //This is the TextView where the response will be displayed
         get_response_text=findViewById(R.id.get_response_data);
-        //post_response_text=findViewById(R.id.post_respone_data);
 
 
         get_request_button.setOnClickListener(new View.OnClickListener() {
@@ -312,13 +317,6 @@ public class ProductSelection extends AppCompatActivity {
             }
         });
 
-        /*
-        post_request_button.setOnClickListener(new View.OnClickListener() {
-            @Override
-            public void onClick(View v) {
-                postRequest();
-            }
-        }); */
     }
 
     @Override
@@ -343,59 +341,11 @@ public class ProductSelection extends AppCompatActivity {
         return super.onOptionsItemSelected(item);
     }
 
-/*
-    private void postRequest() {
-        RequestQueue requestQueue=Volley.newRequestQueue(MainActivity.this);
-        String url="urlhere";
-        StringRequest stringRequest=new StringRequest(Request.Method.POST, url, new Response.Listener<String>() {
-            @Override
-            public void onResponse(String response) {
-                //let's parse json data
-                try {
-                    JSONObject jsonObject = new JSONObject(response);
-                    post_response_text.setText("Data 1 : " + jsonObject.getString("data_1_post")+"\n");
-                    post_response_text.append("Data 2 : " + jsonObject.getString("data_2_post")+"\n");
-                    post_response_text.append("Data 3 : " + jsonObject.getString("data_3_post")+"\n");
-                    post_response_text.append("Data 4 : " + jsonObject.getString("data_4_post")+"\n");
-                }
-                catch (Exception e){
-                    e.printStackTrace();
-                    post_response_text.setText("POST DATA : unable to Parse Json");
-                }
-            }
-        }, new Response.ErrorListener() {
-            @Override
-            public void onErrorResponse(VolleyError error) {
-                post_response_text.setText("Post Data : Response Failed");
-            }
-        }){
-            @Override
-            protected Map<String,String> getParams(){
-                Map<String,String> params=new HashMap<String, String>();
-                params.put("data_1_post","Value 1 Data");
-                params.put("data_2_post","Value 2 Data");
-                params.put("data_3_post","Value 3 Data");
-                params.put("data_4_post","Value 4 Data");
-                return params;
-            }
-
-            @Override
-            public Map<String,String> getHeaders() throws AuthFailureError{
-                Map<String,String> params=new HashMap<String, String>();
-                params.put("Content-Type","application/x-www-form-urlencoded");
-                return params;
-            }
-        };
-
-        requestQueue.add(stringRequest);
-
-    }
-*/
 private void sendGetRequest() {
     //get_response_text is the TextView containing response data
     RequestQueue queue= Volley.newRequestQueue(ProductSelection.this);
 
-    String url="http://67.249.71.109:3001/user"; //put backend server here
+    String url="http://67.249.71.109:3001/13490/1"; //put backend server here
 
     JsonArrayRequest jsonArrayRequest = new JsonArrayRequest(url,
             new Response.Listener<JSONArray>() {
@@ -406,11 +356,11 @@ private void sendGetRequest() {
                         try {
                             JSONObject jsonObject = response.getJSONObject(i);
 
-                            String firstName = jsonObject.getString("firstName");
-                            String lastName = jsonObject.getString("lastName");
+                            String name = jsonObject.getString("name");
+                            //String lastName = jsonObject.getString("lastName");
                             int zip = jsonObject.getInt("zip");
 
-                            get_response_text.setText(get_response_text.getText() + firstName + lastName + zip);
+                            get_response_text.setText(get_response_text.getText() + name + zip);
 
                         } catch (JSONException e) {
                             e.printStackTrace();

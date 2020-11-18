@@ -5,6 +5,7 @@
     <uses-permission android:name="android.permission.INTERNET" />
 
     <application
+        android:name=".MyApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_logo_foreground"
         android:label=""
@@ -12,8 +13,9 @@
         android:supportsRtl="true"
         android:theme="@style/AppTheme"
         android:usesCleartextTraffic="true">
-        <activity android:name=".final_information"></activity>
         <activity android:name=".ScanLabel" />
+        <activity android:name=".Location"/>
+        <activity android:name=".FinalInfo"/>
         <activity android:name=".RecyclingInformation" />
         <activity
             android:name=".ProductSelection"
@@ -26,7 +28,7 @@
         <activity android:name=".ComputerEquipment" />
         <activity android:name=".GreenGlass" />
         <activity android:name=".PlasticContainers" />
-        <activity android:name=".FinalInformation" />
+        <activity android:name=".FinalProduct" />
         <activity android:name=".PlasticCups" />
         <activity android:name=".PlasticBags" />
         <activity android:name=".Copper" />

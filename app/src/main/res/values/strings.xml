@@ -9,10 +9,12 @@
 
     <string name="hello_first_fragment">Hello first fragment</string>
     <string name="hello_second_fragment">Hello second fragment. Arg: %1$s</string>
-    <string name="edit_message">Find a recycling center</string>
+    <string name="zip_message">Enter ZIP Code:</string>
     <string name="button_send">Search</string>
     <string name="button2_send">Batteries</string>
     <string name="button3_send">Plastics</string>
     <string name="button4_send">Electronics</string>
     <string name="button5_send">Bottles and Cans</string>
+    <string name="show_text">Show Text</string>
+    <string name="welcome_message">Welcome to Button Tutorial!</string>
 </resources>
