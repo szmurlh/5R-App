@@ -38,7 +38,7 @@ import android.widget.Toast;
 //[Activity(Label = "ProductSelection", Theme = "@style/AppTheme.NoActionBar")]
 public class ProductSelection extends AppCompatActivity {
 
-    private TextView get_response_text,post_response_text;
+    //private TextView get_response_text;
     Button back;
     private Spinner metalsSpinner;
     private Spinner plasticsSpinner;
@@ -295,14 +295,16 @@ public class ProductSelection extends AppCompatActivity {
         getSupportActionBar().setLogo(R.mipmap.ic_logo_foreground);
         getSupportActionBar().setDisplayUseLogoEnabled(true);
 
+        /*
         FloatingActionButton fab = findViewById(R.id.fab);
         fab.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                Snackbar.make(view, "Replace with your own action", Snackbar.LENGTH_LONG)
+                Snackbar.make(view, "This button might do something one day", Snackbar.LENGTH_LONG)
                         .setAction("Action", null).show();
             }
         });
+
 
         Button get_request_button=findViewById(R.id.get_data);
 
@@ -315,7 +317,7 @@ public class ProductSelection extends AppCompatActivity {
             public void onClick(View v) {
                 sendGetRequest();
             }
-        });
+        });*/
 
     }
 
@@ -340,7 +342,7 @@ public class ProductSelection extends AppCompatActivity {
 
         return super.onOptionsItemSelected(item);
     }
-
+/*
 private void sendGetRequest() {
     //get_response_text is the TextView containing response data
     RequestQueue queue= Volley.newRequestQueue(ProductSelection.this);
@@ -374,5 +376,5 @@ private void sendGetRequest() {
         }
     });
     queue.add(jsonArrayRequest);
-}
+}*/
 }
